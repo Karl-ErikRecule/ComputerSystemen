@@ -1,0 +1,39 @@
+﻿<Window x:Class="CalculatingPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatingPI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="274.94" Width="490.692">
+    <Grid Margin="0,0,2,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="{Binding ExecuteText}" Name="ExecuteBtn" HorizontalAlignment="Left" Margin="203,51,0,0" VerticalAlignment="Top" Width="75" Click="Execute_Click" Grid.ColumnSpan="2" Height="24"/>
+        <Label Name="Lab1" Content="Pi:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,145,0,0" Grid.ColumnSpan="2"/>
+        <Label Name="labelPi"  Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="55,145,0,0" VerticalAlignment="Top"/>
+        <Label Grid.ColumnSpan="2" Content="Error:" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelError" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="55,171,0,0" VerticalAlignment="Top"/>
+        <Label Grid.ColumnSpan="2" Content="Algoritm Duration: " HorizontalAlignment="Left" Margin="12,197,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelTime" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="124,197,0,0" VerticalAlignment="Top"/>
+
+        <RadioButton Name="radioBtn2" GroupName="threadnr" Grid.ColumnSpan="2" Content="2" HorizontalAlignment="Left" Margin="345,61,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="radioBtn8" GroupName="threadnr" Grid.ColumnSpan="2" Content="8" HorizontalAlignment="Left" Margin="345,101,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="radioBtn4" GroupName="threadnr" Grid.ColumnSpan="2" Content="4" HorizontalAlignment="Left" Margin="345,81,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="radioBtn1" GroupName="threadnr" Grid.ColumnSpan="2" Content="1" IsChecked="True" HorizontalAlignment="Left" Margin="345,41,0,0" VerticalAlignment="Top"/>
+        <Label Grid.ColumnSpan="2" Content="Number of threads: " HorizontalAlignment="Left" Margin="345,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,0.34"/>
+        <TextBox Name="nrOfIterations" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="345,182,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
+        <Label Name="numberOfLabel" Grid.ColumnSpan="2" Content="Number of iterations: " HorizontalAlignment="Left" Margin="345,153,0,0" VerticalAlignment="Top"/>
+
+        <RadioButton Grid.ColumnSpan="2" IsChecked="True" Name="Nilakantha" GroupName="selectedAlgorithm" Content="Nilakantha Series" HorizontalAlignment="Left" Margin="12,41,0,0" VerticalAlignment="Top"/>
+        <RadioButton Grid.ColumnSpan="2" Name="GregoryLeibniz" GroupName="selectedAlgorithm" Content="GregoryLeibniz Series" HorizontalAlignment="Left" Margin="12,61,0,0" VerticalAlignment="Top"/>
+        <RadioButton Grid.ColumnSpan="2" Name="Vietes" GroupName="selectedAlgorithm" Content="Vietes Series" HorizontalAlignment="Left" Margin="12,81,0,0" VerticalAlignment="Top"/>
+        <RadioButton Grid.ColumnSpan="2" Unchecked="Rabinowitz_Unchecked" Checked="Rabinowitz_Checked" Name="Rabinowitz" GroupName="selectedAlgorithm" Content="Rabinowitz Wagon" HorizontalAlignment="Left" Margin="12,101,0,0" VerticalAlignment="Top"/>
+        <Label Grid.ColumnSpan="2" Content="Select Algorithm: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <RadioButton Grid.ColumnSpan="2" x:Name="MonteCarlo" GroupName="selectedAlgorithm" Content="MonteCarlo" HorizontalAlignment="Left" Margin="12,121,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioBtn16" GroupName="threadnr" Grid.ColumnSpan="2" Content="16" HorizontalAlignment="Left" Margin="345,121,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
